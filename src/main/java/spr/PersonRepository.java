@@ -1,10 +1,13 @@
 package spr;
 
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.Repository;
 
+import java.util.List;
 import java.util.Optional;
 
-public interface PersonRepository extends Repository<Person,Long> {
-    Person save(Person person);
-    Optional<Person> findById(long id);
+public interface PersonRepository extends CrudRepository<Person,Long> {
+    List<Person> findByName(String Name);
+
+    Person findById(long id);
 }

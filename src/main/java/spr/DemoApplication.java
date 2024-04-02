@@ -16,12 +16,24 @@ public class DemoApplication {
     @Bean
     CommandLineRunner runner(PersonRepository repository){
         return args -> {
-            Person person=new Person();
-            person.setName("John");
+            //Создание чела
+//            Person person=new Person();
+//            person.setName("F");
+//
+//            repository.save(person);
+//            Person saved=repository.findById(person.getId())
+//                    .orElseThrow(NoSuchElementException::new);
 
-            repository.save(person);
-            Person saved=repository.findById(person.getId())
-                    .orElseThrow(NoSuchElementException::new);
+            //Перечисление челов из бд
+            //repository.findAll().forEach(person -> {
+            //System.out.println(person.getName());
+            //});
+
+            //Удаление чела из бд по id
+            //repository.deleteById(2L);
+
+            //Удаление всех
+            //repository.deleteAll();
         };
     }
 }
