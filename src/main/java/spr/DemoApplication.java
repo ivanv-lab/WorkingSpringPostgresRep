@@ -17,10 +17,20 @@ public class DemoApplication {
     CommandLineRunner runner(PersonRepository repository){
         return args -> {
             //Создание чела
-//            Person person=new Person();
-//            person.setName("F");
+
+            Person person=new Person();
+            person.setName("jaja");
+            repository.save(person);
+
+//           Person person=new Person();
+//           person.setName("B");
 //
-//            repository.save(person);
+//           repository.save(person);
+//           person.setName("A");
+//           repository.save(person);
+//           Person person1=new Person();
+//           person1.setName("C");
+//           repository.save(person1);
 //            Person saved=repository.findById(person.getId())
 //                    .orElseThrow(NoSuchElementException::new);
 
